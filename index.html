@@ -55,13 +55,9 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.65;overflow-x:hidden;min-height:100vh}
-
-/* ─── SCROLLBAR ─── */
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
-
-/* ─── NAV ─── */
 .topbar{background:rgba(15,15,19,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200}
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:58px}
 .logo{display:flex;align-items:center;gap:8px;text-decoration:none}
@@ -72,8 +68,6 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .nav-links a{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:600;padding:7px 13px;border-radius:var(--r-sm);transition:all .18s;font-family:'Sora',sans-serif}
 .nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--bg3)}
 @media(max-width:560px){.nav-links{display:none}}
-
-/* ─── HERO ─── */
 .hero{background:var(--grad-hero);padding:56px 20px 48px;text-align:center;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(255,0,0,.07) 0%,transparent 70%);pointer-events:none}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--red-soft);border:1px solid rgba(255,0,0,.2);border-radius:100px;padding:5px 14px;font-size:.75rem;font-weight:600;color:var(--red2);margin-bottom:20px;font-family:'Sora',sans-serif}
@@ -81,16 +75,11 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .hero h1 .yt-red{color:var(--red)}
 .hero h1 .yt-white{color:var(--text)}
 .hero-sub{color:var(--muted);font-size:.9rem;margin-bottom:32px;max-width:460px;margin-left:auto;margin-right:auto}
-
-/* ─── TOOL TABS ─── */
 .tool-tabs{display:inline-flex;background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:5px;gap:4px;margin-bottom:24px}
 .t-tab{display:flex;align-items:center;gap:7px;padding:9px 22px;border-radius:10px;border:none;background:transparent;font-family:'Sora',sans-serif;font-size:.84rem;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s}
 .t-tab svg{width:15px;height:15px;flex-shrink:0}
 .t-tab.active{background:var(--grad-red);color:#fff;box-shadow:0 2px 14px rgba(255,0,0,.3)}
-
-/* ─── TOOL BOX ─── */
 .tool-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;max-width:700px;margin:0 auto;box-shadow:0 8px 40px rgba(0,0,0,.5)}
-
 .url-row{display:flex;align-items:center;background:var(--bg3);border:1.5px solid var(--border2);border-radius:100px;padding:5px 5px 5px 18px;gap:8px;margin-bottom:16px;transition:border-color .2s,box-shadow .2s}
 .url-row:focus-within{border-color:var(--red);box-shadow:0 0 0 3px rgba(255,0,0,.12)}
 .url-icon{color:var(--muted2);display:flex;align-items:center;flex-shrink:0}
@@ -100,16 +89,11 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .btn-fetch{display:flex;align-items:center;gap:7px;padding:10px 22px;border-radius:100px;background:var(--grad-red);border:none;color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;transition:all .18s;white-space:nowrap;flex-shrink:0;box-shadow:0 2px 12px rgba(255,0,0,.3)}
 .btn-fetch:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(255,0,0,.4)}
 .btn-fetch svg{width:14px;height:14px}
-
-/* ─── FORMAT GRID (Video) ─── */
 #videoPanel{display:block}
 #audioPanel{display:none}
-
 .format-label{font-family:'Sora',sans-serif;font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
-
 .quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
 @media(max-width:480px){.quality-grid{grid-template-columns:repeat(2,1fr)}}
-
 .q-card{background:var(--bg3);border:1.5px solid var(--border);border-radius:var(--r);padding:14px 12px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
 .q-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,0,0,.06),transparent);opacity:0;transition:opacity .2s}
 .q-card:hover::before,.q-card.selected::before{opacity:1}
@@ -127,8 +111,6 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .q-check{position:absolute;top:8px;right:8px;width:18px;height:18px;border-radius:50%;background:var(--red);display:none;align-items:center;justify-content:center}
 .q-card.selected .q-check{display:flex}
 .q-check svg{width:10px;height:10px;color:#fff}
-
-/* ─── AUDIO FORMATS ─── */
 .audio-formats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
 @media(max-width:480px){.audio-formats{grid-template-columns:repeat(2,1fr)}}
 .af-card{background:var(--bg3);border:1.5px solid var(--border);border-radius:var(--r);padding:14px 12px;text-align:center;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
@@ -142,8 +124,6 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .af-check{position:absolute;top:8px;right:8px;width:18px;height:18px;border-radius:50%;background:var(--green);display:none;align-items:center;justify-content:center}
 .af-card.selected .af-check{display:flex}
 .af-check svg{width:10px;height:10px;color:#fff}
-
-/* ─── DOWNLOAD BTN ─── */
 .btn-dl-main{width:100%;padding:14px;border-radius:var(--r);border:none;font-family:'Sora',sans-serif;font-weight:800;font-size:.95rem;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px;color:#fff}
 .btn-dl-main.video-dl{background:var(--grad-red);box-shadow:0 4px 18px rgba(255,0,0,.3)}
 .btn-dl-main.video-dl:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(255,0,0,.4)}
@@ -151,11 +131,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .btn-dl-main.audio-dl:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(34,197,94,.35)}
 .btn-dl-main:disabled{opacity:.45;cursor:not-allowed;transform:none !important}
 .btn-dl-main svg{width:17px;height:17px}
-
-/* ─── ERROR ─── */
 #errorBox{display:none;margin-top:14px;background:#2a1010;border:1px solid rgba(255,80,80,.25);border-radius:var(--r-sm);padding:11px 16px;color:#ff8080;font-size:.84rem;align-items:center;gap:8px}
-
-/* ─── PROGRESS ─── */
 #progressBox{display:none;margin-top:16px;text-align:center}
 .spin-wrap{display:flex;justify-content:center;margin-bottom:14px}
 .spinner{width:42px;height:42px;border:3px solid var(--border2);border-top-color:var(--red);border-radius:50%;animation:spin .75s linear infinite}
@@ -166,8 +142,6 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .prog-track{height:5px;background:var(--border);border-radius:100px;overflow:hidden;max-width:320px;margin:0 auto}
 .prog-fill{height:100%;width:0%;border-radius:100px;transition:width .5s ease;background:var(--grad-red)}
 .prog-fill.green-fill{background:linear-gradient(90deg,#16a34a,#22c55e)}
-
-/* ─── RESULT ─── */
 #resultBox{display:none;margin-top:14px}
 .res-card{border-radius:var(--r);padding:16px 18px}
 .res-card.video-res{background:var(--red-soft);border:1px solid rgba(255,0,0,.2)}
@@ -182,8 +156,6 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .btn-save.green-save{background:linear-gradient(135deg,#16a34a,#22c55e);box-shadow:0 2px 10px rgba(34,197,94,.2)}
 .btn-save:hover{transform:translateY(-1px)}
 .btn-save svg{width:13px;height:13px}
-
-/* ─── SECTIONS ─── */
 .wrap{max-width:960px;margin:0 auto;padding:52px 20px}
 .wrap-sm{max-width:960px;margin:0 auto;padding:40px 20px}
 .sec-head{text-align:center;margin-bottom:36px}
@@ -191,8 +163,6 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .sec-badge.green-badge{background:var(--green-soft);color:var(--green);border-color:rgba(34,197,94,.2)}
 .sec-title{font-family:'Sora',sans-serif;font-size:clamp(1.3rem,3.5vw,1.85rem);font-weight:800;letter-spacing:-.4px;margin-bottom:8px}
 .sec-sub{color:var(--muted);font-size:.88rem}
-
-/* Steps */
 .steps-row{display:flex;align-items:flex-start;justify-content:center;gap:0;flex-wrap:wrap}
 .step-card{flex:1;min-width:160px;max-width:210px;text-align:center;padding:0 14px}
 .step-num{width:50px;height:50px;border-radius:50%;background:var(--red-soft);border:2px solid rgba(255,0,0,.25);color:var(--red2);font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
@@ -200,31 +170,23 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .step-card p{font-size:.8rem;color:var(--muted);line-height:1.55}
 .step-arr{display:flex;align-items:flex-start;padding-top:24px;color:var(--border2);font-size:1.3rem}
 @media(max-width:520px){.step-arr{display:none}}
-
-/* Format cards */
 .format-showcase{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
 .fmt-item{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px 14px;text-align:center;transition:border-color .18s,transform .18s}
 .fmt-item:hover{border-color:var(--border2);transform:translateY(-2px)}
 .fmt-res{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:800;color:var(--text);margin-bottom:4px}
 .fmt-pixels{font-size:.72rem;color:var(--muted);margin-bottom:6px}
 .fmt-badge{display:inline-block;font-size:.67rem;font-weight:700;padding:2px 8px;border-radius:100px;font-family:'Sora',sans-serif}
-
-/* Feature grid */
 .feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
 .feat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:20px;transition:all .18s}
 .feat-card:hover{border-color:var(--border2);transform:translateY(-2px)}
 .feat-icon{width:42px;height:42px;border-radius:10px;background:var(--red-soft);border:1px solid rgba(255,0,0,.15);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:12px}
 .feat-card h4{font-family:'Sora',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:6px;color:var(--text)}
 .feat-card p{font-size:.8rem;color:var(--muted);line-height:1.55}
-
-/* About */
 .about-2col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 @media(max-width:600px){.about-2col{grid-template-columns:1fr}}
 .about-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px}
 .about-card h3{font-family:'Sora',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:10px;color:var(--text)}
 .about-card p{font-size:.84rem;color:var(--muted);line-height:1.75}
-
-/* FAQ */
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:600px){.faq-grid{grid-template-columns:1fr}}
 .faq-item{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
@@ -234,18 +196,12 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .faq-item.open .faq-ic{transform:rotate(45deg);background:var(--red);color:#fff;border-color:transparent}
 .faq-a{display:none;padding:0 18px 14px;font-size:.83rem;color:var(--muted);line-height:1.7;border-top:1px solid var(--border)}
 .faq-item.open .faq-a{display:block}
-
-/* DMCA */
 .dmca-wrap{background:#0d0d10;border:1px solid var(--border);border-radius:var(--r);padding:24px 28px;display:flex;align-items:flex-start;gap:16px}
 .dmca-ic{font-size:1.4rem;flex-shrink:0}
 .dmca-wrap h3{font-family:'Sora',sans-serif;font-weight:700;font-size:.92rem;margin-bottom:6px;color:var(--text)}
 .dmca-wrap p{font-size:.82rem;color:var(--muted);line-height:1.7}
 .dmca-wrap a{color:#ff8080}
-
-/* Divider */
 hr{border:none;border-top:1px solid var(--border)}
-
-/* Footer */
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20px 28px}
 .foot-inner{max-width:1100px;margin:0 auto}
 .foot-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:32px;margin-bottom:36px}
@@ -261,7 +217,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
 <header class="topbar">
   <div class="nav-inner">
     <a href="/" class="logo">
@@ -277,16 +232,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
   </div>
 </header>
 
-<!-- ═══ HERO ═══ -->
 <main>
 <section class="hero" id="tool">
-  <div class="hero-badge">
-    ▶ Free · No Signup · All Qualities
-  </div>
+  <div class="hero-badge">▶ Free · No Signup · All Qualities</div>
   <h1><span class="yt-red">YouTube</span> <span class="yt-white">Video Downloader</span></h1>
   <p class="hero-sub">Download videos in 240p, 480p, 720p, 1080p, 2K, 4K — or extract MP3 audio. Fast &amp; free.</p>
 
-  <!-- MODE TABS -->
   <div class="tool-tabs" role="tablist">
     <button class="t-tab active" id="tabVideo" role="tab" aria-selected="true" onclick="setMode('video')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
@@ -298,9 +249,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
     </button>
   </div>
 
-  <!-- TOOL BOX -->
   <div class="tool-box">
-    <!-- URL Input -->
     <div class="url-row">
       <div class="url-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
@@ -312,45 +261,32 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
       </button>
     </div>
 
-    <!-- VIDEO PANEL -->
     <div id="videoPanel">
       <div class="format-label">Select Video Quality</div>
       <div class="quality-grid">
         <div class="q-card" onclick="selectQuality(this,'240p')" data-q="240p">
           <div class="q-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="q-badge">240p</div>
-          <div class="q-res">426×240</div>
-          <div class="q-tag tag-sd">SD</div>
+          <div class="q-badge">240p</div><div class="q-res">426×240</div><div class="q-tag tag-sd">SD</div>
         </div>
         <div class="q-card" onclick="selectQuality(this,'480p')" data-q="480p">
           <div class="q-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="q-badge">480p</div>
-          <div class="q-res">854×480</div>
-          <div class="q-tag tag-sd">SD</div>
+          <div class="q-badge">480p</div><div class="q-res">854×480</div><div class="q-tag tag-sd">SD</div>
         </div>
         <div class="q-card selected" onclick="selectQuality(this,'720p')" data-q="720p">
           <div class="q-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="q-badge">720p</div>
-          <div class="q-res">1280×720</div>
-          <div class="q-tag tag-hd">HD</div>
+          <div class="q-badge">720p</div><div class="q-res">1280×720</div><div class="q-tag tag-hd">HD</div>
         </div>
         <div class="q-card" onclick="selectQuality(this,'1080p')" data-q="1080p">
           <div class="q-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="q-badge">1080p</div>
-          <div class="q-res">1920×1080</div>
-          <div class="q-tag tag-fhd">Full HD</div>
+          <div class="q-badge">1080p</div><div class="q-res">1920×1080</div><div class="q-tag tag-fhd">Full HD</div>
         </div>
         <div class="q-card" onclick="selectQuality(this,'2K')" data-q="2K">
           <div class="q-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="q-badge">2K</div>
-          <div class="q-res">2560×1440</div>
-          <div class="q-tag tag-2k">2K QHD</div>
+          <div class="q-badge">2K</div><div class="q-res">2560×1440</div><div class="q-tag tag-2k">2K QHD</div>
         </div>
         <div class="q-card" onclick="selectQuality(this,'4K')" data-q="4K">
           <div class="q-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="q-badge">4K</div>
-          <div class="q-res">3840×2160</div>
-          <div class="q-tag tag-4k">Ultra HD</div>
+          <div class="q-badge">4K</div><div class="q-res">3840×2160</div><div class="q-tag tag-4k">Ultra HD</div>
         </div>
       </div>
       <button class="btn-dl-main video-dl" onclick="startDownload()">
@@ -359,39 +295,32 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
       </button>
     </div>
 
-    <!-- AUDIO PANEL -->
     <div id="audioPanel">
       <div class="format-label">Select Audio Format</div>
       <div class="audio-formats">
         <div class="af-card selected" onclick="selectAudio(this,'MP3 128kbps')" data-a="MP3 128kbps">
           <div class="af-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="af-name">MP3</div>
-          <div class="af-desc">128 kbps</div>
+          <div class="af-name">MP3</div><div class="af-desc">128 kbps</div>
         </div>
         <div class="af-card" onclick="selectAudio(this,'MP3 320kbps')" data-a="MP3 320kbps">
           <div class="af-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="af-name">MP3</div>
-          <div class="af-desc">320 kbps HQ</div>
+          <div class="af-name">MP3</div><div class="af-desc">320 kbps HQ</div>
         </div>
         <div class="af-card" onclick="selectAudio(this,'M4A')" data-a="M4A">
           <div class="af-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="af-name">M4A</div>
-          <div class="af-desc">AAC Audio</div>
+          <div class="af-name">M4A</div><div class="af-desc">AAC Audio</div>
         </div>
         <div class="af-card" onclick="selectAudio(this,'WEBM')" data-a="WEBM">
           <div class="af-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="af-name">WEBM</div>
-          <div class="af-desc">Web Audio</div>
+          <div class="af-name">WEBM</div><div class="af-desc">Web Audio</div>
         </div>
         <div class="af-card" onclick="selectAudio(this,'OGG')" data-a="OGG">
           <div class="af-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="af-name">OGG</div>
-          <div class="af-desc">Open Format</div>
+          <div class="af-name">OGG</div><div class="af-desc">Open Format</div>
         </div>
         <div class="af-card" onclick="selectAudio(this,'FLAC')" data-a="FLAC">
           <div class="af-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div class="af-name">FLAC</div>
-          <div class="af-desc">Lossless</div>
+          <div class="af-name">FLAC</div><div class="af-desc">Lossless</div>
         </div>
       </div>
       <button class="btn-dl-main audio-dl" onclick="startDownload()">
@@ -400,13 +329,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
       </button>
     </div>
 
-    <!-- Error -->
     <div id="errorBox" role="alert">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
       <span id="errorText">Please enter a valid YouTube URL.</span>
     </div>
 
-    <!-- Progress -->
     <div id="progressBox" role="status" aria-live="polite">
       <div class="spin-wrap"><div class="spinner" id="mainSpinner"></div></div>
       <div id="progTitle">Processing video…</div>
@@ -414,7 +341,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
       <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
     </div>
 
-    <!-- Result -->
     <div id="resultBox">
       <div class="res-card" id="resCard">
         <div class="res-row">
@@ -430,10 +356,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
         </div>
       </div>
     </div>
-  </div><!-- /tool-box -->
+  </div>
 </section>
 
-<!-- ═══ FORMATS INFO ═══ -->
 <section id="formats" aria-labelledby="fmt-heading">
   <div class="wrap">
     <div class="sec-head">
@@ -442,43 +367,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
       <p class="sec-sub">Download YouTube videos from basic SD to stunning Ultra HD 4K</p>
     </div>
     <div class="format-showcase">
-      <div class="fmt-item">
-        <div class="fmt-res">240p</div>
-        <div class="fmt-pixels">426 × 240 px</div>
-        <span class="fmt-badge" style="background:rgba(255,255,255,.06);color:var(--muted)">SD</span>
-      </div>
-      <div class="fmt-item">
-        <div class="fmt-res">480p</div>
-        <div class="fmt-pixels">854 × 480 px</div>
-        <span class="fmt-badge" style="background:rgba(255,255,255,.06);color:var(--muted)">SD</span>
-      </div>
-      <div class="fmt-item">
-        <div class="fmt-res">720p</div>
-        <div class="fmt-pixels">1280 × 720 px</div>
-        <span class="fmt-badge tag-hd">HD</span>
-      </div>
-      <div class="fmt-item">
-        <div class="fmt-res">1080p</div>
-        <div class="fmt-pixels">1920 × 1080 px</div>
-        <span class="fmt-badge tag-fhd">Full HD</span>
-      </div>
-      <div class="fmt-item">
-        <div class="fmt-res">2K</div>
-        <div class="fmt-pixels">2560 × 1440 px</div>
-        <span class="fmt-badge tag-2k">QHD</span>
-      </div>
-      <div class="fmt-item">
-        <div class="fmt-res">4K</div>
-        <div class="fmt-pixels">3840 × 2160 px</div>
-        <span class="fmt-badge tag-4k">Ultra HD</span>
-      </div>
+      <div class="fmt-item"><div class="fmt-res">240p</div><div class="fmt-pixels">426 × 240 px</div><span class="fmt-badge" style="background:rgba(255,255,255,.06);color:var(--muted)">SD</span></div>
+      <div class="fmt-item"><div class="fmt-res">480p</div><div class="fmt-pixels">854 × 480 px</div><span class="fmt-badge" style="background:rgba(255,255,255,.06);color:var(--muted)">SD</span></div>
+      <div class="fmt-item"><div class="fmt-res">720p</div><div class="fmt-pixels">1280 × 720 px</div><span class="fmt-badge tag-hd">HD</span></div>
+      <div class="fmt-item"><div class="fmt-res">1080p</div><div class="fmt-pixels">1920 × 1080 px</div><span class="fmt-badge tag-fhd">Full HD</span></div>
+      <div class="fmt-item"><div class="fmt-res">2K</div><div class="fmt-pixels">2560 × 1440 px</div><span class="fmt-badge tag-2k">QHD</span></div>
+      <div class="fmt-item"><div class="fmt-res">4K</div><div class="fmt-pixels">3840 × 2160 px</div><span class="fmt-badge tag-4k">Ultra HD</span></div>
     </div>
   </div>
 </section>
 
 <hr/>
 
-<!-- ═══ HOW TO ═══ -->
 <section id="how-to" aria-labelledby="steps-heading">
   <div class="wrap">
     <div class="sec-head">
@@ -487,30 +387,17 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
       <p class="sec-sub">Download in any quality in 3 simple steps</p>
     </div>
     <div class="steps-row">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <h3>Copy YouTube Link</h3>
-        <p>Open YouTube, go to the video and copy the URL from the address bar or share button.</p>
-      </div>
+      <div class="step-card"><div class="step-num">1</div><h3>Copy YouTube Link</h3><p>Open YouTube, go to the video and copy the URL from the address bar or share button.</p></div>
       <div class="step-arr">→</div>
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <h3>Paste &amp; Select Quality</h3>
-        <p>Paste the URL above, pick your desired quality (240p to 4K) or switch to Audio tab.</p>
-      </div>
+      <div class="step-card"><div class="step-num">2</div><h3>Paste &amp; Select Quality</h3><p>Paste the URL above, pick your desired quality (240p to 4K) or switch to Audio tab.</p></div>
       <div class="step-arr">→</div>
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <h3>Download Your File</h3>
-        <p>Click Download and save the MP4 video or MP3 audio directly to your device.</p>
-      </div>
+      <div class="step-card"><div class="step-num">3</div><h3>Download Your File</h3><p>Click Download and save the MP4 video or MP3 audio directly to your device.</p></div>
     </div>
   </div>
 </section>
 
 <hr/>
 
-<!-- ═══ FEATURES ═══ -->
 <section id="features" aria-labelledby="feat-heading">
   <div class="wrap-sm">
     <div class="sec-head">
@@ -518,43 +405,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
       <h2 class="sec-title" id="feat-heading">Key Features</h2>
     </div>
     <div class="feat-grid">
-      <div class="feat-card">
-        <div class="feat-icon">⚡</div>
-        <h4>Ultra Fast Downloads</h4>
-        <p>High-speed servers ensure your video downloads start in seconds, not minutes.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">🎯</div>
-        <h4>All Resolutions</h4>
-        <p>From 240p to 4K Ultra HD — choose the exact quality you need for any device.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">🎵</div>
-        <h4>Audio Extraction</h4>
-        <p>Extract MP3, M4A, FLAC, OGG audio from any YouTube video in high quality.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">📱</div>
-        <h4>Works Everywhere</h4>
-        <p>Fully compatible with Android, iPhone, iPad, Windows, Mac — any browser, any device.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">🔒</div>
-        <h4>No Login Needed</h4>
-        <p>100% anonymous. No account, no registration, no email — just paste and download.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">💰</div>
-        <h4>Always Free</h4>
-        <p>No subscriptions, no hidden charges. Download unlimited videos completely free.</p>
-      </div>
+      <div class="feat-card"><div class="feat-icon">⚡</div><h4>Ultra Fast Downloads</h4><p>High-speed servers ensure your video downloads start in seconds, not minutes.</p></div>
+      <div class="feat-card"><div class="feat-icon">🎯</div><h4>All Resolutions</h4><p>From 240p to 4K Ultra HD — choose the exact quality you need for any device.</p></div>
+      <div class="feat-card"><div class="feat-icon">🎵</div><h4>Audio Extraction</h4><p>Extract MP3, M4A, FLAC, OGG audio from any YouTube video in high quality.</p></div>
+      <div class="feat-card"><div class="feat-icon">📱</div><h4>Works Everywhere</h4><p>Fully compatible with Android, iPhone, iPad, Windows, Mac — any browser, any device.</p></div>
+      <div class="feat-card"><div class="feat-icon">🔒</div><h4>No Login Needed</h4><p>100% anonymous. No account, no registration, no email — just paste and download.</p></div>
+      <div class="feat-card"><div class="feat-icon">💰</div><h4>Always Free</h4><p>No subscriptions, no hidden charges. Download unlimited videos completely free.</p></div>
     </div>
   </div>
 </section>
 
 <hr/>
 
-<!-- ═══ ABOUT ═══ -->
 <section id="about">
   <div class="wrap-sm">
     <div class="sec-head">
@@ -563,21 +425,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
       <p class="sec-sub">Fast, free and high quality video &amp; audio downloader</p>
     </div>
     <div class="about-2col">
-      <div class="about-card">
-        <h3>Why use EmYtsave?</h3>
-        <p>EmYtsave.in is a powerful yet simple YouTube downloader that lets you save any public YouTube video directly to your device. Whether you need a 4K tutorial for offline viewing, a music video in 1080p Full HD, or just the audio track as MP3 — our tool handles it all with zero installations required. Just paste the link and get your file.</p>
-      </div>
-      <div class="about-card">
-        <h3>Best Quality Guaranteed</h3>
-        <p>We access YouTube's original media streams to deliver the highest available quality for each resolution. Your 4K downloads are true 3840×2160 UHD files, your 1080p files are genuine Full HD, and your MP3 extractions are taken directly from the source audio — no re-encoding, no quality loss, no watermarks. Pure original content saved to your device.</p>
-      </div>
+      <div class="about-card"><h3>Why use EmYtsave?</h3><p>EmYtsave.in is a powerful yet simple YouTube downloader that lets you save any public YouTube video directly to your device. Whether you need a 4K tutorial for offline viewing, a music video in 1080p Full HD, or just the audio track as MP3 — our tool handles it all with zero installations required. Just paste the link and get your file.</p></div>
+      <div class="about-card"><h3>Best Quality Guaranteed</h3><p>We access YouTube's original media streams to deliver the highest available quality for each resolution. Your 4K downloads are true 3840×2160 UHD files, your 1080p files are genuine Full HD, and your MP3 extractions are taken directly from the source audio — no re-encoding, no quality loss, no watermarks. Pure original content saved to your device.</p></div>
     </div>
   </div>
 </section>
 
 <hr/>
 
-<!-- ═══ FAQ ═══ -->
 <section id="faq" aria-labelledby="faq-heading">
   <div class="wrap-sm">
     <div class="sec-head">
@@ -586,37 +441,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
       <p class="sec-sub">Common questions about YouTube video downloading</p>
     </div>
     <div class="faq-grid">
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How to download YouTube video in 4K?<div class="faq-ic">+</div></div>
-        <div class="faq-a" hidden>Paste the YouTube URL in the input above, select "4K" from the quality grid, then click "Download Video". The file will save as MP4 in 3840×2160 Ultra HD resolution.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Can I download YouTube audio as MP3?<div class="faq-ic">+</div></div>
-        <div class="faq-a" hidden>Yes! Click the "Audio / MP3" tab at the top of the tool, paste your YouTube URL, choose your format (MP3, M4A, FLAC, etc.) and click "Extract Audio".</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Is EmYtsave completely free?<div class="faq-ic">+</div></div>
-        <div class="faq-a" hidden>Yes, 100% free. No account needed, no subscription, no payment. Download as many videos and audio files as you want.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What video formats are available?<div class="faq-ic">+</div></div>
-        <div class="faq-a" hidden>We support MP4 video in 240p, 480p, 720p HD, 1080p Full HD, 2K QHD (1440p), and 4K Ultra HD (2160p). For audio: MP3 (128/320kbps), M4A, WEBM, OGG, and FLAC.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Does it work on mobile?<div class="faq-ic">+</div></div>
-        <div class="faq-a" hidden>Absolutely. EmYtsave works on all devices — Android phones, iPhones, tablets, and desktop browsers. No app installation needed.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Can I download private videos?<div class="faq-ic">+</div></div>
-        <div class="faq-a" hidden>No. Only publicly available YouTube videos can be downloaded. Private or age-restricted videos are not supported.</div>
-      </div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How to download YouTube video in 4K?<div class="faq-ic">+</div></div><div class="faq-a" hidden>Paste the YouTube URL in the input above, select "4K" from the quality grid, then click "Download Video". The file will save as MP4 in 3840×2160 Ultra HD resolution.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I download YouTube audio as MP3?<div class="faq-ic">+</div></div><div class="faq-a" hidden>Yes! Click the "Audio / MP3" tab at the top of the tool, paste your YouTube URL, choose your format (MP3, M4A, FLAC, etc.) and click "Extract Audio".</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Is EmYtsave completely free?<div class="faq-ic">+</div></div><div class="faq-a" hidden>Yes, 100% free. No account needed, no subscription, no payment. Download as many videos and audio files as you want.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What video formats are available?<div class="faq-ic">+</div></div><div class="faq-a" hidden>We support MP4 video in 240p, 480p, 720p HD, 1080p Full HD, 2K QHD (1440p), and 4K Ultra HD (2160p). For audio: MP3 (128/320kbps), M4A, WEBM, OGG, and FLAC.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Does it work on mobile?<div class="faq-ic">+</div></div><div class="faq-a" hidden>Absolutely. EmYtsave works on all devices — Android phones, iPhones, tablets, and desktop browsers. No app installation needed.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can I download private videos?<div class="faq-ic">+</div></div><div class="faq-a" hidden>No. Only publicly available YouTube videos can be downloaded. Private or age-restricted videos are not supported.</div></div>
     </div>
   </div>
 </section>
 
 <hr/>
 
-<!-- ═══ DMCA ═══ -->
 <section id="disclaimer">
   <div class="wrap-sm">
     <div class="dmca-wrap">
@@ -630,7 +466,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
 </section>
 </main>
 
-<!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="foot-inner">
     <div class="foot-grid">
@@ -641,33 +476,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
         </a>
         <p>Fast, free YouTube downloader. Save videos &amp; audio in any quality — no software needed.</p>
       </div>
-      <div class="foot-col">
-        <h4>Tools</h4>
-        <ul>
-          <li><a href="#">YouTube Downloader</a></li>
-          <li><a href="#">YouTube to MP3</a></li>
-          <li><a href="#">YouTube to MP4</a></li>
-          <li><a href="#">4K Downloader</a></li>
-          <li><a href="#">Playlist Downloader</a></li>
-          <li><a href="#">Shorts Downloader</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">DMCA Policy</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">How It Works</a></li>
-        </ul>
-      </div>
+      <div class="foot-col"><h4>Tools</h4><ul><li><a href="#">YouTube Downloader</a></li><li><a href="#">YouTube to MP3</a></li><li><a href="#">YouTube to MP4</a></li><li><a href="#">4K Downloader</a></li><li><a href="#">Playlist Downloader</a></li><li><a href="#">Shorts Downloader</a></li></ul></div>
+      <div class="foot-col"><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">DMCA Policy</a></li></ul></div>
+      <div class="foot-col"><h4>Support</h4><ul><li><a href="#">Contact Us</a></li><li><a href="#">FAQ</a></li><li><a href="#">How It Works</a></li></ul></div>
     </div>
     <div class="foot-bottom">
       <p>EmYtsave.in is not affiliated with YouTube™ or Google LLC. YouTube is a trademark of Google LLC. All trademarks belong to their respective owners.</p>
@@ -677,12 +488,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 20p
 </footer>
 
 <script>
-// ─── STATE ───
 let currentMode = 'video';
 let selectedQuality = '720p';
 let selectedAudio = 'MP3 128kbps';
 
-// ─── MODE SWITCH ───
 function setMode(mode) {
   currentMode = mode;
   document.getElementById('tabVideo').classList.toggle('active', mode === 'video');
@@ -692,7 +501,6 @@ function setMode(mode) {
   hideAll();
 }
 
-// ─── QUALITY SELECTION ───
 function selectQuality(el, q) {
   document.querySelectorAll('.q-card').forEach(c => c.classList.remove('selected'));
   el.classList.add('selected');
@@ -705,7 +513,6 @@ function selectAudio(el, a) {
   selectedAudio = a;
 }
 
-// ─── PASTE ───
 async function pasteURL() {
   try {
     const t = await navigator.clipboard.readText();
@@ -713,7 +520,6 @@ async function pasteURL() {
   } catch { document.getElementById('urlInput').focus(); }
 }
 
-// ─── VALIDATE ───
 function isYTUrl(url) {
   return /(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)[\w-]{11}/.test(url);
 }
@@ -724,17 +530,16 @@ function showError(msg) {
   document.getElementById('errorText').textContent = msg;
   el.style.display = 'flex';
 }
+
 function hideAll() {
   document.getElementById('errorBox').style.display = 'none';
   document.getElementById('progressBox').style.display = 'none';
   document.getElementById('resultBox').style.display = 'none';
 }
 
-// ─── BACKEND URL ───
 const BACKEND = 'https://emytsave-backend.onrender.com';
 
-// ─── PROGRESS ANIMATION ───
-function runProgress(isAudio, onDone) {
+function runProgress(isAudio) {
   const fill = document.getElementById('progFill');
   const spinner = document.getElementById('mainSpinner');
   fill.style.width = '0%';
@@ -742,13 +547,11 @@ function runProgress(isAudio, onDone) {
   spinner.className = 'spinner' + (isAudio ? ' green' : '');
   const pts = [5,15,30,50,70,85,95];
   let i = 0;
-  const iv = setInterval(() => {
+  return setInterval(() => {
     if (i < pts.length) { fill.style.width = pts[i]+'%'; i++; }
   }, 600);
-  return iv;
 }
 
-// ─── MAIN DOWNLOAD ───
 async function startDownload() {
   const url = document.getElementById('urlInput').value.trim();
   hideAll();
@@ -761,7 +564,7 @@ async function startDownload() {
   document.getElementById('progTitle').textContent = isAudio ? 'Extracting audio track…' : `Processing ${selectedQuality} video…`;
   document.getElementById('progNote').textContent = 'Please wait, first request may take 30-50 sec…';
 
-  const iv = runProgress(isAudio, null);
+  const iv = runProgress(isAudio);
 
   try {
     const res = await fetch(`${BACKEND}/info?url=${encodeURIComponent(url)}`);
@@ -780,32 +583,29 @@ async function startDownload() {
 
       // Quality height map
       const qMap = {'240p':240,'480p':480,'720p':720,'1080p':1080,'2K':1440,'4K':2160};
-
-      let dlUrl = null;
+      let selectedFormat = null;
 
       if (isAudio) {
-        // Best audio format
         const audioFmts = data.formats.filter(f => f.quality === 'audio');
-        if (audioFmts.length > 0) dlUrl = audioFmts[audioFmts.length - 1].url;
+        if (audioFmts.length > 0) selectedFormat = audioFmts[audioFmts.length - 1];
       } else {
-        // Match selected quality height
         const targetH = qMap[selectedQuality] || 720;
         const videoFmts = data.formats.filter(f => f.quality !== 'audio');
-        // Find exact or nearest
+        // Exact match
         let best = videoFmts.find(f => parseInt(f.quality) === targetH);
-        if (!best) {
-          // Get closest
-          best = videoFmts.sort((a,b) =>
-            Math.abs(parseInt(a.quality)-targetH) - Math.abs(parseInt(b.quality)-targetH)
+        // Nearest if no exact
+        if (!best && videoFmts.length > 0) {
+          best = videoFmts.sort((a, b) =>
+            Math.abs(parseInt(a.quality) - targetH) - Math.abs(parseInt(b.quality) - targetH)
           )[0];
         }
-        if (best) dlUrl = best.url;
+        if (best) selectedFormat = best;
       }
 
-      if (dlUrl) {
-        showResult(dlUrl, isAudio, data.title);
+      if (selectedFormat && selectedFormat.url) {
+        showResult(selectedFormat.url, isAudio, data.title, selectedFormat.quality);
       } else {
-        showError('This quality is not available. Please try another.');
+        showError('This quality is not available for this video. Please try another quality.');
       }
     }, 400);
 
@@ -816,14 +616,14 @@ async function startDownload() {
   }
 }
 
-// ─── SHOW RESULT ───
-function showResult(dlUrl, isAudio, videoTitle) {
+function showResult(dlUrl, isAudio, videoTitle, quality) {
   const card = document.getElementById('resCard');
   const thumb = document.getElementById('resThumb');
   const title = document.getElementById('resTitle');
   const meta = document.getElementById('resMeta');
   const link = document.getElementById('dlLink');
   const lbl = document.getElementById('saveLbl');
+  const displayQ = quality || selectedQuality;
 
   if (isAudio) {
     card.className = 'res-card audio-res';
@@ -836,17 +636,19 @@ function showResult(dlUrl, isAudio, videoTitle) {
     card.className = 'res-card video-res';
     thumb.textContent = '🎬';
     title.textContent = videoTitle || 'YouTube Video';
-    meta.textContent = `MP4 · ${selectedQuality} · Ready to download`;
+    meta.textContent = `MP4 · ${displayQ} · Ready to download`;
     link.className = 'btn-save red-save';
-    lbl.textContent = `Save ${selectedQuality} MP4`;
+    lbl.textContent = `Save ${displayQ} MP4`;
   }
+
   link.href = dlUrl;
-  link.download = isAudio ? 'audio.mp3' : `video_${selectedQuality}.mp4`;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.removeAttribute('download');
 
   document.getElementById('resultBox').style.display = 'block';
 }
 
-// ─── FAQ ───
 function toggleFaq(el) {
   const item = el.parentElement;
   const wasOpen = item.classList.contains('open');
