@@ -558,22 +558,25 @@ async function fetchAndShow() {
     lastFetchedUrl = url;
     videoTitle = data.title || 'video';
 
-    // Build dropdown with real formats
+    // Build dropdown with REAL available formats only
     const filtered = filterFormats(fetchedFormats, currentMode);
     const cfg = TAB_CONFIG[currentMode];
 
     if (filtered.length > 0) {
-      // Convert backend format objects to dropdown options
       const opts = filtered.map(f => ({
         value: f.quality + '|' + f.ext,
         label: f.quality === 'audio'
-          ? `Audio — ${f.ext.toUpperCase()} (${f.filesize ? Math.round(f.filesize/1024/1024)+'MB' : 'best quality'})`
+          ? `Best Audio — ${f.ext.toUpperCase()}${f.filesize ? ' (~'+Math.round(f.filesize/1024/1024)+'MB)' : ''}`
           : `${f.quality} — ${f.ext.toUpperCase()}${f.filesize ? ' (~'+Math.round(f.filesize/1024/1024)+'MB)' : ''}`
       }));
       buildDropdown(opts, cfg.selectClass);
     } else {
       buildDropdown(DEFAULT_FORMATS[currentMode], cfg.selectClass);
     }
+
+    // ✅ Auto-select first (best) format and start download immediately
+    document.getElementById('qualitySelect').selectedIndex = 0;
+    startDownload();
 
   } catch(e) {
     document.getElementById('qualityLoading').style.display = 'none';
